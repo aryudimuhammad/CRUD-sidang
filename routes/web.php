@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/cetak', 'CrudController@cetak')->name('cetak');
+Route::get('/cetak/{id}', 'CrudController@cetaks')->name('cetaks');
 Route::get('/', 'CrudController@index')->name('index');
 Route::post('/', 'CrudController@store')->name('store');
 Route::get('/{id}', 'CrudController@edit')->name('edit');

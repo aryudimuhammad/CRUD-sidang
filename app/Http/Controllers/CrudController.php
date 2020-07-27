@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Crud;
 use Illuminate\Http\Request;
 
@@ -63,5 +64,21 @@ class CrudController extends Controller
         $data->delete();
 
         return back();
+    }
+
+    public function cetak()
+    {
+        $data = Crud::get();
+
+        $pdf = PDF::loadview('cetak', compact('data'));
+        return $pdf->stream('cetak-pdf');
+    }
+
+    public function cetaks($id)
+    {
+        $data = Crud::where('id', $id)->get();
+
+        $pdf = PDF::loadview('cetak', compact('data'));
+        return $pdf->stream('cetak-pdf');
     }
 }

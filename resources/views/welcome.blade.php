@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Home</title>
 
     <!-- Fonts -->
     <link href="{{url('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -97,6 +97,7 @@
     </div>
     <div class="col-sm-8 float-right" style="margin-top: 12px;">
         <div class="card">
+            <a class="btn btn-primary" href="{{route('cetak')}}" target="_blank">Cetak</a>
             <div class="card-body">
                 <table class="table">
                     <thead>
@@ -120,6 +121,7 @@
                             <td>
                                 <a class="btn btn-warning" href="{{route('edit',['id' => $d->id])}}">Edit</a>
                                 <a class="btn btn-danger" href="{{route('delete',['id' => $d->id])}}">Delete</a>
+                                <a class="btn btn-primary" target="_blank" href="{{route('cetaks',['id' => $d->id])}}">Cetak</a>
                             </td>
                         </tr>
                         @endforeach

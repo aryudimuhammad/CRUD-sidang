@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Form Edit</title>
 
     <!-- Fonts -->
     <link href="{{url('css/bootstrap.min.css')}}" rel="stylesheet">
