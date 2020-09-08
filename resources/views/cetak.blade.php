@@ -110,20 +110,12 @@
             <thead>
                 <tr>
                     <th scope="col" class="text-center">No</th>
-                    <th scope="col" class="text-center">nama</th>
-                    <th scope="col" class="text-center">nama1</th>
-                    <th scope="col" class="text-center">alamat</th>
-                    <th scope="col" class="text-center">gambar</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($data as $d)
                 <tr>
                     <td scope="col" class="text-center">{{$loop->iteration}}</td>
-                    <td scope="col" class="text-center">{{$d->nama}}</td>
-                    <td scope="col" class="text-center">{{$d->nama1}}</td>
-                    <td scope="col" class="text-center">{{$d->alamat}}</td>
-                    <td scope="col" class="text-center">{{$d->gambar}}</td>
                 </tr>
                 @endforeach
             </tbody>

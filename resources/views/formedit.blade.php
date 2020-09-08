@@ -78,18 +78,6 @@
                         <label for="nama">nama</label>
                         <input type="text" class="form-control" id="nama" name="nama" value="{{$data->nama}}">
                     </div>
-                    <div class="form-group">
-                        <label for="nama1">nama1</label>
-                        <input type="text" class="form-control" id="nama1" name="nama1" value="{{$data->nama1}}">
-                    </div>
-                    <div class="form-group">
-                        <label for="alamat">alamat</label>
-                        <textarea class="form-control" id="alamat" name="alamat"> {{$data->alamat}} </textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="gambar">gambar</label>
-                        <input type="file" class="form-control" id="gambar" name="gambar" value="{{$data->gambar}}">
-                    </div>
                     <button type="submit" class="btn btn-primary">Ubah</button>
                     <a type="button" class="btn btn-danger" href="{{route('index')}}">Kembali</a>
                 </form>

@@ -77,18 +77,6 @@
                         <label for="nama">nama</label>
                         <input type="text" class="form-control" id="nama" name="nama">
                     </div>
-                    <div class="form-group">
-                        <label for="nama1">nama1</label>
-                        <input type="text" class="form-control" id="nama1" name="nama1">
-                    </div>
-                    <div class="form-group">
-                        <label for="alamat">alamat</label>
-                        <textarea class="form-control" id="alamat" name="alamat"> </textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="gambar">gambar</label>
-                        <input type="file" class="form-control" id="gambar" name="gambar">
-                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-danger">Reset</button>
                 </form>
@@ -103,10 +91,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>nama</th>
-                            <th>nama1</th>
-                            <th>alamat</th>
-                            <th>gambar</th>
+                            <th></th>
                             <th>aksi</th>
                         </tr>
                     </thead>
@@ -114,14 +99,10 @@
                         @foreach($data as $d)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$d->nama}}</td>
-                            <td>{{$d->nama1}}</td>
-                            <td>{{$d->alamat}}</td>
-                            <td>{{$d->gambar}}</td>
+                            <td></td>
                             <td>
                                 <a class="btn btn-warning" href="{{route('edit',['id' => $d->id])}}">Edit</a>
                                 <a class="btn btn-danger" href="{{route('delete',['id' => $d->id])}}">Delete</a>
-                                <a class="btn btn-primary" target="_blank" href="{{route('cetaks',['id' => $d->id])}}">Cetak</a>
                             </td>
                         </tr>
                         @endforeach
